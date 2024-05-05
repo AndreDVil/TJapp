@@ -8,6 +8,7 @@ dash.register_page(__name__, name='All Trades', path = '/alltrades')
 with server.app_context():
     df_trades = get_all_trades()
 
+# build the layout for trades table
 layout = html.Div([
     dash_table.DataTable(
         id='trades-table',
